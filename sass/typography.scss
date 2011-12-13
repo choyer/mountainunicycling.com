@@ -1,0 +1,79 @@
+@import "includes/settings";
+@import "includes/mixins";
+@import "includes/colors";
+
+/* Typography */
+h1,h2,h3,h4,h5,h6 {
+  color: #181818;
+	font-family: "Proxima",sans-serif;
+  font-weight: bold;
+  line-height: 1.25;
+  small {
+    color: #777777; }
+  a {
+    font-weight: inherit; } }
+
+h1 {
+  @include font-size(46);
+  margin-bottom: 12px; }
+
+h2 {
+  @include font-size(35);
+  margin-bottom: 9px; }
+
+h3 {
+  @include font-size(28);
+  margin-bottom: 9px; }
+
+h4 {
+  @include font-size(21);
+  margin-bottom: 3px; }
+
+h5 {
+  @include font-size(18);
+  margin-bottom: 3px;
+  font-weight: normal; }
+
+h6 {
+  @include font-size(15);
+  font-weight: normal; }
+
+.subhead {
+  color: #777777;
+  font-weight: 300;
+  margin-bottom: 24px; }
+
+p {
+  line-height: 17px;
+  margin: 0 0 18px;
+  img {
+    margin: 0; }
+  &.lead {
+    @include font-size(18);
+    line-height: 24px; } }
+
+em, i {
+  font-style: italic;
+  line-height: inherit; }
+
+strong, b {
+  font-weight: bold;
+  line-height: inherit; }
+
+small {
+  font-size: 60%;
+  line-height: inherit; }
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  body, p {
+    @include font-size(15);
+    line-height: 1.4; } }
+
+
+hr {
+  border: solid #dddddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 12px 0 18px;
+  height: 0; }
